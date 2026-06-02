@@ -1,0 +1,39 @@
+=> create databse.
+CREATE DATABASE ticket_system;
+
+USE ticket_system;
+
+=> create table
+CREATE TABLE users (
+    id INT PRIMARY KEY IDENTITY(1,1),
+    name VARCHAR(100),
+    email VARCHAR(255),
+    created_at DATETIME
+);
+
+=> insert data
+INSERT INTO Users (name, email, created_at)
+VALUES ('Tanvir Hasan', 'tanvir@gmail.com', GETDATE());
+
+=> get data
+  1. SELECT email FROM users //for get specific column
+  2. SELECT * FROM users
+
+=> see unique values
+select distinct name from users;
+
+=> get value depending on condition
+  1.select *  from users where name = 'tanvir hasan';
+  2. SELECT * FROM table_name
+      WHERE column_name BETWEEN 50 AND 60;
+  3. SELECT * FROM Customers
+     WHERE City LIKE 's%';
+
+=> add column , delete column
+  1. ALTER TABLE table_name
+     DROP COLUMN column_name;
+  2. ALTER TABLE table_name
+   ADD column_name datatype;
+
+
+
