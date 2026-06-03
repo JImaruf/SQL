@@ -1,0 +1,1 @@
+select * from production.products where production.products.product_id = 1001;

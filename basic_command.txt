@@ -28,12 +28,63 @@ select distinct name from users;
       WHERE column_name BETWEEN 50 AND 60;
   3. SELECT * FROM Customers
      WHERE City LIKE 's%';
+  4. SELECT * FROM table_name
+    WHERE column_name IN ('VALUE','VALUE2');
+  5.SELECT column1, column2, ...
+    FROM table_name
+    WHERE NOT condition;
 
 => add column , delete column
   1. ALTER TABLE table_name
      DROP COLUMN column_name;
   2. ALTER TABLE table_name
    ADD column_name datatype;
+
+=> Top
+  1.SELECT TOP 5 * FROM users;
+  2.SELECT TOP 50 PERCENT * FROM users;
+
+=> ORDER BY
+  1.SELECT * FROM table_name
+  ORDER BY column_name DESC;(Descending order)
+
+=> Aliases
+  1.SELECT column_name AS alias_name FROM table_name;
+
+=> Comments
+    for comments use (--)
+
+=> NULL.
+  SELECT *
+  FROM users
+  WHERE Phone IS NULL;
+
+=> Not NULL.
+  SELECT *
+  FROM users
+  WHERE Phone IS NOT NULL;
+
+=> arithmatic operation
+    #Addition
+    SELECT Salary + 5000 AS NewSalary
+    FROM Employees;
+
+    #Subtraction
+    SELECT Salary - 2000 AS NewSalary
+    FROM Employees;
+
+    #Multiplication
+    SELECT Salary * 12 AS YearlySalary
+    FROM Employees;
+
+    #Division
+    SELECT Salary / 2 AS HalfSalary
+    FROM Employees;
+
+
+
+
+
 
 
 
