@@ -15,3 +15,6 @@ SELECT REPLACE('I love Java', 'Java', 'SQL');
 
 SELECT value
 FROM STRING_SPLIT('Apple,Banana,Mango', ',');
+
+SELECT STRING_AGG(brand_name, ', ')
+FROM production.brands;
