@@ -1,0 +1,38 @@
+-- GET CURRENT DATE
+SELECT GETDATE() tODAY_DATE;
+
+--CURRENT DAY
+
+SELECT DAY(GETDATE()) today_day;
+
+--CURRENT Month
+
+SELECT MONTH(GETDATE()) today_month;
+
+--CURRENT year
+
+SELECT YEAR(GETDATE()) today_year;
+
+--Date Part
+
+SELECT DATEPART(year,'2026-09-6') As DatePart_Year,
+ DATEPART(WEEK,GETDATE()) As DatePart_WEEK --WEEK DAY
+;
+--DATE NAME
+
+SELECT DATENAME(MM,'2026-09-6') As DateNAME_MONTH
+;
+--DATE NAME
+
+SELECT DATENAME(WEEKDAY,'2026-09-6') As DateNAME_DAY
+;
+
+--Date Trunc month. only keep till the command . others are reset .
+SELECT DATETRUNC(MONTH,GETDATE()) DateTruncMonth;
+
+
+SELECT DATETRUNC(year,GETDATE()) DateTruncYear;
+
+-- EOMONTH
+
+SELECT EOMONTH(GETDATE()) ENDofMONTH;
